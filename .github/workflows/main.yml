@@ -24,7 +24,32 @@ jobs:
         run: |
           echo "DEBUG"
 
-  deployment:
+  deployment-staging:
+    runs-on: ubuntu-latest
+    needs: build
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Files
+        run: |
+          ls -lR
+
+      - name: Deploy ENV
+        run: |
+          env | sort
+
+      - name: Deploy PR
+        run: |
+          git rev-parse HEAD
+          git status
+
+      - name: Deploy to staging
+        run: |
+          echo "DEPLOYING TO STAGING
+
+          
+  deployment-production:
     runs-on: ubuntu-latest
     needs: build
     environment: production
