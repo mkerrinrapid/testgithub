@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  create-release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,9 +24,14 @@ jobs:
         run: |
           echo "DEBUG"
 
+      - name: Create release ticket
+        run: |
+          echo "Create release ticket"
+          echo "Share ticket number to deployment jobs below"
+
   deployment-staging:
     runs-on: ubuntu-latest
-    needs: build
+    needs: create-release
     environment: staging
     steps:
       - uses: actions/checkout@v4
