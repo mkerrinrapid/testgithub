@@ -31,6 +31,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Files
+        run: |
+          ls -lR
+
+      - name: Deploy ENV
+        run: |
+          env | sort
+
+      - name: Deploy PR
+        run: |
+          git rev-parse HEAD
+          git status
+
       - name: Deploy to production
         run: |
           echo "DEPLOYING TO PRODUCTION"
