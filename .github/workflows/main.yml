@@ -46,12 +46,12 @@ jobs:
 
       - name: Deploy to staging
         run: |
-          echo "DEPLOYING TO STAGING
+          echo "DEPLOYING TO STAGING"
 
           
   deployment-production:
     runs-on: ubuntu-latest
-    needs: build
+    needs: staging
     environment: production
     steps:
       - uses: actions/checkout@v4
