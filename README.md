@@ -8,4 +8,6 @@ After a PR is merged the code is push to main branch triggering deployment
 
 Accept deployment
 
+Read who did this
+
 Rejct deployment
