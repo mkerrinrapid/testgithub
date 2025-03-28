@@ -76,7 +76,7 @@ jobs:
   deployment-staging-failed:
     runs-on: ubuntu-latest
     needs: create-release
-    if: ${{ failure }}
+    if: failure()
     steps:
       - name: Failed release
         run: |
