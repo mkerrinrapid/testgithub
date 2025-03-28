@@ -1,6 +1,7 @@
 name: Deployment
 
-concurrency: production
+concurrency:
+  group: ${{ inputs.repository }}
 
 on:
   # Runs on pushes targeting the default branch
