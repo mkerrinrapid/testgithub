@@ -53,6 +53,12 @@ jobs:
         run: |
           echo "DEPLOYING TO STAGING"
 
+      - name: Info
+        run: |
+          echo "$GITHUB_ACTOR"
+          echo "$GITHUB_ACTOR_ID"
+          echo "$GITHUB_TRIGGERING_ACTOR"
+
           
   deployment-production:
     runs-on: ubuntu-latest
