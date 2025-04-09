@@ -5,6 +5,12 @@ on: [push]
 jobs:
   testing:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      checks: write
+      pull-requests: write
+      id-token: write
+      statuses: write
     steps:
       - uses: actions/checkout@v4
 
@@ -31,5 +37,5 @@ jobs:
           pull-request-report: true
           update-comment: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         if: always()
