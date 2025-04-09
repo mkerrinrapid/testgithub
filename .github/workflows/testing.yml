@@ -51,7 +51,8 @@ jobs:
           commit-report: true
 
           pull-request: true
-          status-check: false
+          status-check: true
+          status-check-name: 'GitHub Test Reporter Results'
           update-comment: true
           overwrite-comment: true
 
