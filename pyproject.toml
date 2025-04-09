@@ -1,0 +1,30 @@
+[project]
+name = "testgithub"
+version = "0.0.1"
+description = "Rapid Ratings Automated Testing"
+readme = "README.md"
+# The code is not compatible with Python <=3.8
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "python-json-logger",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/mkerrinrapid/testgithub"
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+# Make isort compatible with black import format
+profile = "black"
+multi_line_output = 3
+line_length = 79
+
+# Specify first-party paths
+src_paths = ["src"]
