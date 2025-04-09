@@ -34,8 +34,17 @@ jobs:
         uses: ctrf-io/github-test-reporter@v1
         with:
           report-path: './ctrf/*.json'
+          status-check: true
+          summary-report: true
+          github-report: true
+          failed-report: true
+          fail-rate-report: true
           pull-request-report: true
+
           update-comment: true
+          pull-request: true
+
+          upload-artifact: true
         env:
           GITHUB_TOKEN: ${{ secrets.TESTGITHUB_TOKEN2 }}
         if: always()
