@@ -55,6 +55,8 @@ jobs:
           update-comment: true
           overwrite-comment: true
 
+          comment-tag: '${{ github.workflow }}-${{ github.job }}'
+
           upload-artifact: true
         env:
           GITHUB_TOKEN: ${{ github.token }}
