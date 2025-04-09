@@ -2,7 +2,7 @@ name: Deployment
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 on:
   # Runs on pushes targeting the default branch
