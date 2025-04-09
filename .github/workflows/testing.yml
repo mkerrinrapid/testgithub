@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write
       checks: write
       pull-requests: write
       id-token: write
@@ -34,8 +35,30 @@ jobs:
         uses: ctrf-io/github-test-reporter@v1
         with:
           report-path: './ctrf/*.json'
+
+          summary-report: true
+          github-report: true
+          test-report: true
+          test-list-report: true
+          failed-report: true
+          fail-rate-report: true
+          flaky-report: true
+          flaky-rate-report: rue
+          failed-folded-report: true
+          previous-results-report: true
+          insights-report: true
           pull-request-report: true
+          commit-report: true
+
+          pull-request: true
+          status-check: true
+          status-check-name: 'GitHub Test Reporter Results'
           update-comment: true
+          overwrite-comment: true
+
+          comment-tag: '${{ github.workflow }}-${{ github.job }}'
+
+          upload-artifact: true
         env:
-          GITHUB_TOKEN: ${{ secrets.TESTGITHUB_TOKEN2 }}
+          GITHUB_TOKEN: ${{ github.token }}
         if: always()
