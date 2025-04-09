@@ -37,5 +37,5 @@ jobs:
           pull-request-report: true
           update-comment: true
         env:
-          GITHUB_TOKEN: ${{ secrets.TESTGITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TESTGITHUB_TOKEN2 }}
         if: always()
