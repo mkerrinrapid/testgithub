@@ -16,4 +16,7 @@ jobs:
           pip install .
       - name: Test with pytest
         run: |
-          pytest --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+          pytest \
+              --junitxml=junit/test-results.xml \
+              --cov=com --cov-report=xml --cov-report=html \
+              --ctrf ctrf/report.json
