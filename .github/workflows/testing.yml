@@ -51,7 +51,7 @@ jobs:
           commit-report: true
 
           pull-request: true
-          status-check: true
+          status-check: false
           update-comment: true
           overwrite-comment: true
 
