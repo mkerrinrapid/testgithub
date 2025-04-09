@@ -12,6 +12,7 @@ dependencies = [
     "python-json-logger",
     "pytest",
     "pytest-cov",
+    "pytest-json-ctrf",
 ]
 
 [project.urls]
