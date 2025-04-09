@@ -36,7 +36,7 @@ jobs:
               --ctrf ctrf/report.json
 
       - name: Publish Test Report
-        uses: mkerrinrapid/github-test-reporter
+        uses: mkerrinrapid/github-test-reporter@main
         with:
           report-path: './ctrf/*.json'
 
