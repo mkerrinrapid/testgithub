@@ -57,5 +57,5 @@ jobs:
 
           upload-artifact: true
         env:
-          GITHUB_TOKEN: ${{ secrets.TESTGITHUB_TOKEN3 }}
+          GITHUB_TOKEN: ${{ github.token }}
         if: always()
