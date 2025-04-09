@@ -36,19 +36,11 @@ jobs:
         with:
           report-path: './ctrf/*.json'
 
-          summary-report: true
-          github-report: true
-          test-report: true
-          test-list-report: true
           failed-report: true
           fail-rate-report: true
           flaky-report: true
-          flaky-rate-report: rue
-          failed-folded-report: true
-          previous-results-report: true
-          insights-report: true
-          pull-request-report: true
-          commit-report: true
+          flaky-rate-report: true
+          annotate: false
 
           pull-request: true
           status-check: true
