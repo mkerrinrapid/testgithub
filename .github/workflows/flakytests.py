@@ -30,10 +30,11 @@ repo = g.get_repo("mkerrinrapid/testgithub")
 current_run = repo.get_workflow_run(int(os.environ["GITHUB_RUN_ID"]))
 
 artifacts = current_run.get_artifacts()
+print(list(artifacts))
 reports = list(filter(lambda a: a.name == "ctrf-report", artifacts))
 if not reports:
     print("No reports")
-    sys.exit(1)
+    sys.exit(0)
 
 old_report_data = get_report(reports[0])
 old_tests = {test["name"]: test for test in old_report_data["results"]["tests"]}
