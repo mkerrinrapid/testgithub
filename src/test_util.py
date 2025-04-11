@@ -16,7 +16,7 @@ class TestUtil(unittest.TestCase):
     def test_erh3(self):
         assert True
 
-    def test_erh4(self):
+    def test_blah1(self):
         assert True
 
     def test_calc_issues(self):
