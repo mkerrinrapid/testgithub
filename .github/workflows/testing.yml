@@ -45,6 +45,8 @@ jobs:
           pip install PyGithub
 
           python3 .github/workflows/flakytests.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         if: always()
 
       - name: Publish Test Report
