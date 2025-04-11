@@ -21,10 +21,6 @@ def get_report(artifact, filename="ctrf-report.json"):
     return data
     
 
-import pdb
-pdb.set_trace()
-
-
 auth = Auth.Token(os.environ.get("GITHUB_TOKEN"))
 g = Github(auth=auth)
 
