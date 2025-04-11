@@ -37,7 +37,7 @@ jobs:
 
       - name: Debug test reports
         run: |
-          env | sort
+          env | grep GITHUB | sort
 
       - name: Publish Test Report
         uses: mkerrinrapid/github-test-reporter@main
