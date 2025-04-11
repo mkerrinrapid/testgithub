@@ -42,6 +42,8 @@ jobs:
 
       - name: Internal Python Test Reporting
         run: |
+          pip install PyGithub
+
           python3 .github/workflows/flakytests.py
         if: always()
 
