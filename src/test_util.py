@@ -7,7 +7,10 @@ class TestUtil(unittest.TestCase):
     def test_calc(self):
         assert True
 
-    def test_calc2(self):
+    def test_erh(self):
+        assert True
+
+    def test_erh2(self):
         assert True
 
     def test_calc_issues(self):
