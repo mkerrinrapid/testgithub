@@ -43,6 +43,8 @@ jobs:
         run: |
           set -x
           cat testgitops/testservice.yml | sed 's,image/image:.*,image/image:v2,g'
+          git -C testgitops config user.name "Test Deploy"
+          git -C testgitops config user.email "michael.kerrin@rapidratings.com"
           git -C testgitops add testservice.yml
           git -C testgitops commit -m "Test deploy"
           git -C testgitops push origin test-cluster
