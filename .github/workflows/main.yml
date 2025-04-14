@@ -42,12 +42,14 @@ jobs:
       - name: Test UPDATE
         run: |
           set -x
-          cat testgitops/testservice.yml | sed 's,image/image:.*,image/image:v2,g'
-          git -C testgitops config user.name "Test Deploy"
-          git -C testgitops config user.email "michael.kerrin@rapidratings.com"
-          git -C testgitops add testservice.yml
-          git -C testgitops commit -m "Test deploy"
-          git -C testgitops push origin test-cluster
+          cd testgitops
+          cat testservice.yml | sed 's,image/image:.*,image/image:v2,g' > testservice.yml
+          cat testservice.yml
+          git config user.name "Test Deploy"
+          git config user.email "michael.kerrin@rapidratings.com"
+          git add testservice.yml
+          git commit -m "Test deploy"
+          git push origin test-cluster
           
 
   deploy-staging-migration:
