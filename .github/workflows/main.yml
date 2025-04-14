@@ -36,6 +36,7 @@ jobs:
         with:
           repository: mkerrinrapid/testgitops
           ref: test-cluster
+          path: testgitops
           token: ${{ github.token }}
 
       - name: Test UPDATE
