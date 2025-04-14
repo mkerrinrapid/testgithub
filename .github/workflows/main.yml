@@ -31,6 +31,18 @@ jobs:
           echo "Create release ticket"
           echo "Share ticket number to deployment jobs below"
 
+      - name: Test DEPLOY - checkout
+        uses: actions/checkout@v4
+        with:
+          repository: mkerrinrapid/testgitops
+          ref: test-cluster
+          token: ${{ github.token }}
+
+      - name: Test UPDATE
+        run: |
+          cat testgitops/testservice.yml | sed 's,image/image:.*,image/image:v2,g'
+          
+
   deploy-staging-migration:
     runs-on: ubuntu-latest
     concurrency:
