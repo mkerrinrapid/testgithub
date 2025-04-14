@@ -42,9 +42,9 @@ jobs:
       - name: Test UPDATE
         run: |
           cat testgitops/testservice.yml | sed 's,image/image:.*,image/image:v2,g'
-          git add -C testgitops add testgitops/testservice.yml
-          git commit -m "Test deploy"
-          git push origin test-cluster
+          git -C testgitops add testgitops/testservice.yml
+          git -C testgitops commit -m "Test deploy"
+          git -C testgitops push origin test-cluster
           
 
   deploy-staging-migration:
