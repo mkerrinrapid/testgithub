@@ -34,7 +34,7 @@ jobs:
       - name: Test DEPLOY - checkout
         uses: actions/checkout@v4
         with:
-          repository: mkerrinrapid/testgitops
+          repository: mkrapidtestorg/testgithub-secrets
           ref: test-cluster
           path: testgitops
           token: ${{ secrets.TESTGITHUB_TOKEN3 }}
