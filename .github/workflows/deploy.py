@@ -2,7 +2,7 @@ import sys
 import yaml
 import re
 
-data = yaml.load(open(sys.argv[1]))
+data = yaml.load(open(sys.argv[1]), Loader=yaml.FullLoader)
 print(data)
 
 image = data["spec"]["image"]
