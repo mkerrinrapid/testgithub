@@ -49,7 +49,7 @@ jobs:
           git config user.email "michael.kerrin@rapidratings.com"
           git add testservice.yml
           git commit -m "Test deploy"
-          git push origin test-cluster
+          git push origin test-clusters
           
 
   deploy-staging-migration:
