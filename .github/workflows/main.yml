@@ -37,7 +37,7 @@ jobs:
           repository: mkrapidtestorg/testgithub-secrets
           ref: test-clusters
           path: testgitops
-          token: ${{ secrets.TESTGITHUB_TOKEN3 }}
+          token: ${{ secrets.MKTESTORGSECRET }}
 
       - name: Test UPDATE
         run: |
