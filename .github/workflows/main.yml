@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: mkrapidtestorg/testgithub-secrets
-          ref: test-cluster
+          ref: test-clusters
           path: testgitops
           token: ${{ secrets.TESTGITHUB_TOKEN3 }}
 
