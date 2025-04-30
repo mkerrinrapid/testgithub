@@ -40,6 +40,15 @@ jobs:
           env | grep GITHUB | sort
         if: always()
 
+      - name: Internal Python Test Reporting
+        run: |
+          pip install PyGithub
+
+          python3 .github/workflows/flakytests.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        if: always()
+
       - name: Publish Test Report
         uses: mkerrinrapid/github-test-reporter@main
         with:
